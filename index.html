@@ -655,20 +655,8 @@ footer { border-top: 1px solid var(--line); padding: 34px 0 40px; }
 /* ============================================================
    CLIENT WORDS / pull quotes
 ============================================================ */
-.words-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px 56px;
-  border-top: 1px solid var(--line);
-  padding-top: 8px;
-  margin-top: 56px;
-}
-.words-grid.single { grid-template-columns: 1fr; }
-.words-grid.single .word { border-left: 0; padding-left: 0; }
-.words-grid.single .word blockquote { font-size: 1.32rem; max-width: 860px; }
-.word { border-left: 1px solid var(--line-soft); padding-left: 40px; }
-.word:nth-child(2n+1) { border-left: 0; padding-left: 0; }
-.word:nth-child(n+3) { border-top: 1px solid var(--line-soft); padding-top: 32px; }
+.word { padding: 6px 0 18px; }
+#dynamicReviews .word { border-top: 1px solid var(--line-soft); padding-top: 26px; margin-top: 26px; }
 
 .review-panel { margin-top: 72px; border-top: 1px solid var(--line); padding-top: 40px; }
 .review-panel .lead { color: var(--ink-dim); font-size: 0.95rem; max-width: 560px; line-height: 1.75; margin-top: 12px; }
@@ -818,10 +806,7 @@ footer { border-top: 1px solid var(--line); padding: 34px 0 40px; }
 }
 
 @media (max-width: 1020px) {
-  .words-grid { grid-template-columns: 1fr; gap: 0; }
-  .word { border-left: 0 !important; padding-left: 0 !important; padding: 30px 0; border-bottom: 1px solid var(--line-soft); }
-  .word:nth-child(n+3) { border-top: 0; padding-top: 0; }
-  .word:last-child { border-bottom: 0; }
+  .word { padding: 22px 0; }
   .protocol { grid-template-columns: 1fr 1fr; gap: 28px; }
 }
 @media (max-width: 640px) {
@@ -1206,34 +1191,6 @@ footer { border-top: 1px solid var(--line); padding: 34px 0 40px; }
     <!-- TODO (before launch): these quotes are DRAFTS modeled on real engagements.
          Send each to the actual colleague for sign-off (or swap in their exact words),
          and add names/companies where they permit. Do not publish unapproved quotes. -->
-    <div class="words-grid single">
-      <div class="word reveal" style="--d:80ms">
-        <blockquote>
-          I had the pleasure of working with Musharaf Abid on a client project, where he contributed
-          as an AI Developer. His expertise in data analysis, knowledge-base development, and
-          AI-powered chatbot solutions was genuinely impressive. Musharaf demonstrated strong
-          technical skills, a great understanding of AI concepts, and the ability to turn complex
-          requirements into practical solutions. He was proactive, reliable, and focused on
-          delivering high-quality results throughout the project.
-        </blockquote>
-        <p class="attr"><span class="who">Associate Principal Software Engineer</span>TEO International · client project</p>
-        <!-- TODO: ask for name + LinkedIn to upgrade: NAME · role, TEO International + View on LinkedIn link -->
-        <p class="verify"><span class="note">Reference available on request</span></p>
-      </div>
-
-      <!-- ═══ PENDING REAL REVIEWS — paste VERBATIM text only, when recovered or resent ═══
-           Template (copy per reviewer):
-           <div class="word reveal" style="--d:120ms">
-             <blockquote>[THEIR EXACT WORDS]</blockquote>
-             <p class="attr"><span class="who">[DESIGNATION]</span>[ORGANIZATION] · [client project / engagement]</p>
-             <p class="verify"><a href="[LINKEDIN_URL]" target="_blank" rel="noopener">View on LinkedIn ↗</a></p>
-           </div>
-           Pending: 1) Engineering Lead, Nexora AI   2) CEO, Lads Technologies   3) Project Manager, Neural Technologies
-           When the 2nd quote goes live: change class "words-grid single" to "words-grid" (activates 2-column grid).
-           Do NOT invent, polish, or paraphrase into "better English" — verbatim is the credibility. -->
-    </div>
-
-
     <div id="dynamicReviews"></div>
 
     <div class="review-panel reveal" style="--d:220ms">
@@ -1398,9 +1355,9 @@ footer { border-top: 1px solid var(--line); padding: 34px 0 40px; }
     </p>
 
     <div class="contact-actions reveal" style="--d:120ms">
-      <a class="btn btn-solid" href="/cdn-cgi/l/email-protection#c4a9b1b7aca5b6a5a2eaaceaa5a6ada084a3a9a5ada8eaa7aba9">Email Me</a>
-      <button class="copy-email" id="copyEmail" data-email="musharaf.h.abid@gmail.com" title="Copy email address"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c0adb5b3a8a1b2a1a6eea8eea1a2a9a480a7ada1a9aceea3afad">[email&#160;protected]</a></button>
-      <a class="rule-link" href="/cdn-cgi/l/email-protection#ea879f99828b988b8cc482c48b88838eaa8d878b8386c4898587d5999f88808f899ed7a3849e9885cfd8da898b8686cfd8da8584cfd8da8b84cfd8daaba3cfd8da9a9885808f899e">Book a 30-min intro call <span class="arw">↗</span></a>
+      <a class="btn btn-solid" href="/cdn-cgi/l/email-protection#a3ced6d0cbc2d1c2c58dcb8dc2c1cac7e3c4cec2cacf8dc0ccce">Email Me</a>
+      <button class="copy-email" id="copyEmail" data-email="musharaf.h.abid@gmail.com" title="Copy email address"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a7cad2d4cfc6d5c6c189cf89c6c5cec3e7c0cac6cecb89c4c8ca">[email&#160;protected]</a></button>
+      <a class="rule-link" href="/cdn-cgi/l/email-protection#f09d85839891829196de98de91929994b0979d91999cde939f9dcf8385929a959384cdb99e84829fd5c2c093919c9cd5c2c09f9ed5c2c0919ed5c2c0b1b9d5c2c080829f9a959384">Book a 30-min intro call <span class="arw">↗</span></a>
       <a class="rule-link" href="Musharaf_Hussain_Abid_CV.pdf">Download CV (PDF) <span class="arw">↓</span></a>
     </div>
 
@@ -1415,7 +1372,7 @@ footer { border-top: 1px solid var(--line); padding: 34px 0 40px; }
         <div class="net">WhatsApp</div>
         <div class="handle">+92 323 548 4551 <span class="arw">↗</span></div>
       </a>
-      <a href="/cdn-cgi/l/email-protection#761b03051e17041710581e5817141f1236111b171f1a5815191b">
+      <a href="/cdn-cgi/l/email-protection#731e06001b120112155d1b5d12111a1733141e121a1f5d101c1e">
         <div class="net">Direct</div>
         <div class="handle">Email <span class="arw">↗</span></div>
       </a>
@@ -1597,5 +1554,5 @@ if (!('IntersectionObserver' in window)) {
 ============================================================ */
 document.getElementById('year').textContent = new Date().getFullYear();
 </script>
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a46e93dac8ceb3be',t:'MTc5MTM5MzYzNw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a46ea3756f193010',t:'MTc5MTM5NDI3Ng=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
