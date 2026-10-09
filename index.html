@@ -655,20 +655,8 @@ footer { border-top: 1px solid var(--line); padding: 34px 0 40px; }
 /* ============================================================
    CLIENT WORDS / pull quotes
 ============================================================ */
-.words-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px 56px;
-  border-top: 1px solid var(--line);
-  padding-top: 8px;
-  margin-top: 56px;
-}
-.words-grid.single { grid-template-columns: 1fr; }
-.words-grid.single .word { border-left: 0; padding-left: 0; }
-.words-grid.single .word blockquote { font-size: 1.32rem; max-width: 860px; }
-.word { border-left: 1px solid var(--line-soft); padding-left: 40px; }
-.word:nth-child(2n+1) { border-left: 0; padding-left: 0; }
-.word:nth-child(n+3) { border-top: 1px solid var(--line-soft); padding-top: 32px; }
+.word { padding: 6px 0 18px; }
+#dynamicReviews .word { border-top: 1px solid var(--line-soft); padding-top: 26px; margin-top: 26px; }
 
 .review-panel { margin-top: 72px; border-top: 1px solid var(--line); padding-top: 40px; }
 .review-panel .lead { color: var(--ink-dim); font-size: 0.95rem; max-width: 560px; line-height: 1.75; margin-top: 12px; }
@@ -818,10 +806,7 @@ footer { border-top: 1px solid var(--line); padding: 34px 0 40px; }
 }
 
 @media (max-width: 1020px) {
-  .words-grid { grid-template-columns: 1fr; gap: 0; }
-  .word { border-left: 0 !important; padding-left: 0 !important; padding: 30px 0; border-bottom: 1px solid var(--line-soft); }
-  .word:nth-child(n+3) { border-top: 0; padding-top: 0; }
-  .word:last-child { border-bottom: 0; }
+  .word { padding: 22px 0; }
   .protocol { grid-template-columns: 1fr 1fr; gap: 28px; }
 }
 @media (max-width: 640px) {
@@ -1096,7 +1081,7 @@ footer { border-top: 1px solid var(--line); padding: 34px 0 40px; }
   <div class="container">
     <p class="index-label reveal">03 / Selected Work</p>
     <h2 class="section-title reveal">Work I put <em>my name on.</em></h2>
-    <p class="section-sub reveal" style="--d:60ms">Three client engagements, from live enterprise pipelines to real-time vision. Each one is judged by the outcome it delivered, not the technology used.</p>
+    <p class="section-sub reveal" style="--d:60ms">Client systems, open-source releases and automation agents, from enterprise LLM pipelines to real-time vision. Each one is judged by the outcome it delivered, not the technology used.</p>
 
     <div style="margin-top:64px">
 
@@ -1118,7 +1103,7 @@ footer { border-top: 1px solid var(--line); padding: 34px 0 40px; }
             depends on model-generated text.
           </p>
           <div class="case-meta">
-            <div class="row"><span class="k">Client</span><span class="v">Confidential · construction enterprise · via Auspira(remote)</span></div>
+            <div class="row"><span class="k">Client</span><span class="v">Confidential · construction enterprise · via Nexora AI (remote)</span></div>
             <div class="row"><span class="k">Scope</span><span class="v">Architecture · build · optimization · production operations</span></div>
             <div class="row"><span class="k">Stack</span><span class="v">Python<span class="sep">·</span>Azure OpenAI<span class="sep">·</span>Azure Service Bus<span class="sep">·</span>Azure AI Search<span class="sep">·</span>Azure Blob Storage</span></div>
           </div>
@@ -1168,28 +1153,152 @@ footer { border-top: 1px solid var(--line); padding: 34px 0 40px; }
       <article class="case reveal">
         <div class="case-no">03</div>
         <div class="case-main">
-          <h3>Churn Prediction &amp; Real-Time Person Detection</h3>
+          <h3>Customer Churn Prediction</h3>
           <p class="brief">
-            A five-month client engagement spanning two AI initiatives. First, I
-            <strong>fine-tuned machine learning models for customer churn prediction</strong>, giving the
-            client an early read on the accounts most likely to leave. Then I built the vision side: a
-            <strong>real-time detection, counting and alert-generation system</strong> on a fine-tuned
-            YOLOv8n model, watching live footage and firing alerts the moment conditions matched.
+            Customers rarely announce they are leaving: by the time an account cancels, the decision
+            was made weeks earlier. In this client engagement I
+            <strong>fine-tuned machine learning models for customer churn prediction</strong>, turning
+            the client's own account data into an <strong>early read on the accounts most likely to
+            leave</strong>, so the business could act while there was still time to act. Work covered
+            the full modeling path: preparing the data, fine-tuning the models, and evaluating them
+            until the predictions were dependable enough to base decisions on.
           </p>
           <div class="case-meta">
-            <div class="row"><span class="k">Client</span><span class="v">Confidential · via Neural Technologies · 5-month engagement</span></div>
-            <div class="row"><span class="k">Scope</span><span class="v">Model fine-tuning · evaluation · real-time deployment</span></div>
-            <div class="row"><span class="k">Stack</span><span class="v">Python<span class="sep">·</span>classical ML<span class="sep">·</span>YOLOv8n (fine-tuned)<span class="sep">·</span>OpenCV</span></div>
+            <div class="row"><span class="k">Client</span><span class="v">Confidential · via Neural Technologies</span></div>
+            <div class="row"><span class="k">Scope</span><span class="v">Data preparation · model fine-tuning · evaluation</span></div>
+            <div class="row"><span class="k">Stack</span><span class="v">Python<span class="sep">·</span>classical ML</span></div>
           </div>
           <div class="case-foot">
-            <a class="rule-link" href="#contact">Scope a similar system <span class="arw">→</span></a>
+            <a class="rule-link" href="#contact">Scope a similar model <span class="arw">→</span></a>
           </div>
         </div>
         <div class="outcomes">
           <p class="oc-label">Outcomes</p>
-          <div class="outcome"><div class="v">2</div><div class="k">Systems delivered · churn models + live detection</div></div>
-          <div class="outcome"><div class="v">5 mo</div><div class="k">Client engagement, start to deployment</div></div>
-          <div class="outcome"><div class="v">Real-time</div><div class="k">Person detection, counting &amp; automatic alerts</div></div>
+          <div class="outcome"><div class="v">Early read</div><div class="k">Accounts most likely to leave, flagged before they do</div></div>
+          <div class="outcome"><div class="v">Fine-tuned</div><div class="k">Models shaped on the client's own account history</div></div>
+          <div class="outcome"><div class="v">End to end</div><div class="k">From raw account data to dependable predictions</div></div>
+        </div>
+      </article>
+
+      <!-- CASE 04 -->
+      <article class="case reveal">
+        <div class="case-no">04</div>
+        <div class="case-main">
+          <h3>Real-Time Crowd Counting System</h3>
+          <p class="brief">
+            Dense crowds break off-the-shelf detectors: people stack on people and occlusion eats
+            accuracy. So I fine-tuned <strong>YOLOv8n on the CrowdHuman dataset, 15,000 training
+            images</strong> of exactly those conditions, and wrapped the model in a real-time
+            application: webcam, image and video inference with live counting, adjustable confidence,
+            and <strong>automatic visual and sound alerts</strong> when a configurable crowd threshold
+            is crossed. Built for surveillance and public-safety use, released open source.
+          </p>
+          <div class="case-meta">
+            <div class="row"><span class="k">Context</span><span class="v">Open-source project · public-safety surveillance</span></div>
+            <div class="row"><span class="k">Scope</span><span class="v">Dataset preparation · fine-tuning · evaluation · real-time application</span></div>
+            <div class="row"><span class="k">Stack</span><span class="v">Python<span class="sep">·</span>Ultralytics YOLOv8n<span class="sep">·</span>OpenCV<span class="sep">·</span>Streamlit</span></div>
+          </div>
+          <div class="case-foot">
+            <a class="rule-link" href="#contact">Discuss a vision system <span class="arw">→</span></a>
+          </div>
+        </div>
+        <div class="outcomes">
+          <p class="oc-label">Outcomes</p>
+          <div class="outcome"><div class="v">0.776</div><div class="k">mAP50 · dense &amp; occluded crowds after fine-tune</div></div>
+          <div class="outcome"><div class="v">82.8%</div><div class="k">Precision on held-out evaluation</div></div>
+          <div class="outcome"><div class="v">15,000</div><div class="k">CrowdHuman images used for fine-tuning</div></div>
+        </div>
+      </article>
+
+      <!-- CASE 05 -->
+      <article class="case reveal">
+        <div class="case-no">05</div>
+        <div class="case-main">
+          <h3>WhatsApp CRM Assistant: Conversational Orchestrator</h3>
+          <p class="brief">
+            Business requests arrive over WhatsApp as casual messages and get lost by the dozen. I
+            built an <strong>LLM orchestrator that reads each incoming message, extracts what the
+            sender actually wants, and routes it to the right sub-workflow</strong>: projects, leads
+            or reminders. Conversations hold state across turns through a session state machine, a
+            parallel step-by-step menu mode offers a guided alternative to free text, and a scheduled
+            agent delivers reminders on time. The data layer was migrated to an
+            <strong>external ERP API as the single source of truth</strong>.
+          </p>
+          <div class="case-meta">
+            <div class="row"><span class="k">Focus</span><span class="v">Conversational AI · LLM orchestration</span></div>
+            <div class="row"><span class="k">Scope</span><span class="v">Intent routing · stateful multi-turn flows · scheduled delivery</span></div>
+            <div class="row"><span class="k">Stack</span><span class="v">n8n<span class="sep">·</span>OpenAI<span class="sep">·</span>WhatsApp Cloud API<span class="sep">·</span>PostgreSQL</span></div>
+          </div>
+          <div class="case-foot">
+            <a class="rule-link" href="#contact">Automate a workflow like this <span class="arw">→</span></a>
+          </div>
+        </div>
+        <div class="outcomes">
+          <p class="oc-label">Outcomes</p>
+          <div class="outcome"><div class="v">3</div><div class="k">Sub-workflows orchestrated: projects, leads, reminders</div></div>
+          <div class="outcome"><div class="v">Stateful</div><div class="k">Multi-turn conversations via a session state machine</div></div>
+          <div class="outcome"><div class="v">ERP</div><div class="k">External API promoted to the single source of truth</div></div>
+        </div>
+      </article>
+
+      <!-- CASE 06 -->
+      <article class="case reveal">
+        <div class="case-no">06</div>
+        <div class="case-main">
+          <h3>Supplier Deals Pipeline: AI Price-Comparison Agent</h3>
+          <p class="brief">
+            Sourcing across international marketplaces means manual searching, translation guesswork
+            and prices in mixed currencies. I automated the entire sweep: the pipeline
+            <strong>searches six international marketplaces</strong>, uses an LLM to
+            <strong>translate buyer queries into Chinese and Turkish</strong>, normalizes every price
+            to USD automatically, and writes the comparison report itself. A
+            <strong>Next.js dashboard</strong> presents the results behind strict relevance filtering,
+            so loosely-matching listings never reach the buyer.
+          </p>
+          <div class="case-meta">
+            <div class="row"><span class="k">Focus</span><span class="v">Autonomous research agent · e-commerce sourcing</span></div>
+            <div class="row"><span class="k">Scope</span><span class="v">Marketplace search · LLM translation · report generation</span></div>
+            <div class="row"><span class="k">Stack</span><span class="v">n8n<span class="sep">·</span>Apify<span class="sep">·</span>OpenAI<span class="sep">·</span>Next.js<span class="sep">·</span>Vercel</span></div>
+          </div>
+          <div class="case-foot">
+            <a class="rule-link" href="#contact">Automate your sourcing <span class="arw">→</span></a>
+          </div>
+        </div>
+        <div class="outcomes">
+          <p class="oc-label">Outcomes</p>
+          <div class="outcome"><div class="v">6</div><div class="k">International marketplaces searched automatically</div></div>
+          <div class="outcome"><div class="v">2</div><div class="k">Languages handled by LLM translation: Chinese, Turkish</div></div>
+          <div class="outcome"><div class="v">USD</div><div class="k">Every price normalized before comparison</div></div>
+        </div>
+      </article>
+
+      <!-- CASE 07 -->
+      <article class="case reveal">
+        <div class="case-no">07</div>
+        <div class="case-main">
+          <h3>ImgX: Serverless GPU Image-Enhancement API</h3>
+          <p class="brief">
+            Photo-restoration models are heavy, and serving them reliably behind an API is an
+            infrastructure problem as much as a model problem. I deployed
+            <strong>GFPGAN and Real-ESRGAN on NVIDIA A10G GPUs</strong> behind a serverless Modal
+            endpoint, then stress-tested the service and <strong>resolved four production bugs</strong>:
+            a pipe-buffer deadlock, a Triton configuration type mismatch, and CUDA out-of-memory
+            failures on high-resolution inputs among them.
+          </p>
+          <div class="case-meta">
+            <div class="row"><span class="k">Focus</span><span class="v">GPU inference · image restoration</span></div>
+            <div class="row"><span class="k">Scope</span><span class="v">Deployment · load testing · production debugging</span></div>
+            <div class="row"><span class="k">Stack</span><span class="v">Modal<span class="sep">·</span>NVIDIA Triton<span class="sep">·</span>GFPGAN<span class="sep">·</span>Real-ESRGAN</span></div>
+          </div>
+          <div class="case-foot">
+            <a class="rule-link" href="#contact">Ship a GPU API <span class="arw">→</span></a>
+          </div>
+        </div>
+        <div class="outcomes">
+          <p class="oc-label">Outcomes</p>
+          <div class="outcome"><div class="v">2</div><div class="k">Restoration models served: GFPGAN &amp; Real-ESRGAN</div></div>
+          <div class="outcome"><div class="v">A10G</div><div class="k">NVIDIA GPUs behind a serverless API endpoint</div></div>
+          <div class="outcome"><div class="v">4</div><div class="k">Production bugs resolved under stress testing</div></div>
         </div>
       </article>
 
@@ -1206,34 +1315,6 @@ footer { border-top: 1px solid var(--line); padding: 34px 0 40px; }
     <!-- TODO (before launch): these quotes are DRAFTS modeled on real engagements.
          Send each to the actual colleague for sign-off (or swap in their exact words),
          and add names/companies where they permit. Do not publish unapproved quotes. -->
-    <div class="words-grid single">
-      <div class="word reveal" style="--d:80ms">
-        <blockquote>
-          I had the pleasure of working with Musharaf Abid on a client project, where he contributed
-          as an AI Developer. His expertise in data analysis, knowledge-base development, and
-          AI-powered chatbot solutions was genuinely impressive. Musharaf demonstrated strong
-          technical skills, a great understanding of AI concepts, and the ability to turn complex
-          requirements into practical solutions. He was proactive, reliable, and focused on
-          delivering high-quality results throughout the project.
-        </blockquote>
-        <p class="attr"><span class="who">Associate Principal Software Engineer</span>TEO International · client project</p>
-        <!-- TODO: ask for name + LinkedIn to upgrade: NAME · role, TEO International + View on LinkedIn link -->
-        <p class="verify"><span class="note">Reference available on request</span></p>
-      </div>
-
-      <!-- ═══ PENDING REAL REVIEWS — paste VERBATIM text only, when recovered or resent ═══
-           Template (copy per reviewer):
-           <div class="word reveal" style="--d:120ms">
-             <blockquote>[THEIR EXACT WORDS]</blockquote>
-             <p class="attr"><span class="who">[DESIGNATION]</span>[ORGANIZATION] · [client project / engagement]</p>
-             <p class="verify"><a href="[LINKEDIN_URL]" target="_blank" rel="noopener">View on LinkedIn ↗</a></p>
-           </div>
-           Pending: 1) Engineering Lead, Nexora AI   2) CEO, Lads Technologies   3) Project Manager, Neural Technologies
-           When the 2nd quote goes live: change class "words-grid single" to "words-grid" (activates 2-column grid).
-           Do NOT invent, polish, or paraphrase into "better English" — verbatim is the credibility. -->
-    </div>
-
-
     <div id="dynamicReviews"></div>
 
     <div class="review-panel reveal" style="--d:220ms">
@@ -1398,9 +1479,9 @@ footer { border-top: 1px solid var(--line); padding: 34px 0 40px; }
     </p>
 
     <div class="contact-actions reveal" style="--d:120ms">
-      <a class="btn btn-solid" href="/cdn-cgi/l/email-protection#c4a9b1b7aca5b6a5a2eaaceaa5a6ada084a3a9a5ada8eaa7aba9">Email Me</a>
-      <button class="copy-email" id="copyEmail" data-email="musharaf.h.abid@gmail.com" title="Copy email address"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c0adb5b3a8a1b2a1a6eea8eea1a2a9a480a7ada1a9aceea3afad">[email&#160;protected]</a></button>
-      <a class="rule-link" href="/cdn-cgi/l/email-protection#ea879f99828b988b8cc482c48b88838eaa8d878b8386c4898587d5999f88808f899ed7a3849e9885cfd8da898b8686cfd8da8584cfd8da8b84cfd8daaba3cfd8da9a9885808f899e">Book a 30-min intro call <span class="arw">↗</span></a>
+      <a class="btn btn-solid" href="/cdn-cgi/l/email-protection#0b667e78636a796a6d2563256a69626f4b6c666a626725686466">Email Me</a>
+      <button class="copy-email" id="copyEmail" data-email="musharaf.h.abid@gmail.com" title="Copy email address"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="69041c1a01081b080f470147080b000d290e04080005470a0604">[email&#160;protected]</a></button>
+      <a class="rule-link" href="/cdn-cgi/l/email-protection#b6dbc3c5ded7c4d7d098de98d7d4dfd2f6d1dbd7dfda98d5d9db89c5c3d4dcd3d5c28bffd8c2c4d9938486d5d7dada938486d9d8938486d7d8938486f7ff938486c6c4d9dcd3d5c2">Book a 30-min intro call <span class="arw">↗</span></a>
       <a class="rule-link" href="Musharaf_Hussain_Abid_CV.pdf">Download CV (PDF) <span class="arw">↓</span></a>
     </div>
 
@@ -1415,7 +1496,7 @@ footer { border-top: 1px solid var(--line); padding: 34px 0 40px; }
         <div class="net">WhatsApp</div>
         <div class="handle">+92 323 548 4551 <span class="arw">↗</span></div>
       </a>
-      <a href="/cdn-cgi/l/email-protection#761b03051e17041710581e5817141f1236111b171f1a5815191b">
+      <a href="/cdn-cgi/l/email-protection#ea879f99828b988b8cc482c48b88838eaa8d878b8386c4898587">
         <div class="net">Direct</div>
         <div class="handle">Email <span class="arw">↗</span></div>
       </a>
@@ -1597,5 +1678,5 @@ if (!('IntersectionObserver' in window)) {
 ============================================================ */
 document.getElementById('year').textContent = new Date().getFullYear();
 </script>
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a46e93dac8ceb3be',t:'MTc5MTM5MzYzNw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a47cb13f8cedaa63',t:'MTc5MTU0MTY0Mg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
